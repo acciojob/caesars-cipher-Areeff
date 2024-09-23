@@ -37,12 +37,12 @@ function rot13(encodedStr) {
 	let a="A".charCodeAt[0];
 	let z="Z".charCodeAt[0];
 	for(let i=0;i<encodedStr.length;i++){
-		let ch=encodedStr[i];
+		let ch=encodedStr[i].charCodeAt[0];
 		if(ch<=z &&ch>=a){
 			decodedArr[i]=lookup[ch];
 		}
 		else{
-			decodedArr[i]=ch;
+			decodedArr[i]=encodedStr[i];
 		}
 	}
 
